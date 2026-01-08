@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>スペース様向けA4リーフレット（バランス最適化版）</title>
+    <title>スペース様向けA4リーフレット（QRコード追加版）</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
@@ -103,11 +103,9 @@
         </header>
 
         <div class="relative mb-7 w-full h-[340px] bg-slate-50 rounded-xl overflow-hidden shadow-inner border border-gray-200 shrink-0">
-            
             <div class="absolute inset-0 z-0">
                 <img src="main.jpg" alt="メインビジュアル" class="w-full h-full object-cover">
             </div>
-
             <div class="absolute top-9 left-5 z-10 w-48">
                 <div class="bg-white/95 backdrop-blur-md p-3 rounded-r-lg rounded-tl-lg shadow-md border-l-4 border-blue-600">
                     <span class="text-[10px] text-gray-400 font-bold uppercase block mb-1 tracking-wider">Sound Reach</span>
@@ -115,7 +113,6 @@
                     <p class="text-[10px] text-gray-600 font-bold mt-1">全方位への自然な広がり</p>
                 </div>
             </div>
-
             <div class="absolute top-9 right-5 z-10 w-48 flex justify-end">
                 <div class="bg-white/95 backdrop-blur-md p-3 text-right rounded-l-lg rounded-tr-lg shadow-md border-r-4 border-gray-400 w-full">
                     <span class="text-[10px] text-gray-400 font-bold uppercase block mb-1 tracking-wider">Design</span>
@@ -123,7 +120,6 @@
                     <p class="text-[10px] text-gray-600 mt-1">圧迫感を与えないフォルム</p>
                 </div>
             </div>
-
             <div class="absolute bottom-9 left-5 z-10 w-48">
                 <div class="bg-white/95 backdrop-blur-md p-3 rounded-r-lg rounded-bl-lg shadow-md border-l-4 border-blue-600">
                     <span class="text-[10px] text-gray-400 font-bold uppercase block mb-1 tracking-wider">Cover Area</span>
@@ -134,7 +130,6 @@
                     <p class="text-[10px] text-gray-600 font-bold mt-1">1台で全体をカバー</p>
                 </div>
             </div>
-
             <div class="absolute bottom-9 right-5 z-10 w-48 flex justify-end">
                 <div class="bg-white/95 backdrop-blur-md p-3 text-right rounded-l-lg rounded-br-lg shadow-md border-r-4 border-gray-400 w-full">
                     <span class="text-[10px] text-gray-400 font-bold uppercase block mb-1 tracking-wider">Material</span>
@@ -150,13 +145,11 @@
                     <span class="text-2xl mr-2 text-blue-600 font-serif italic">Q.</span> 
                     <span>単なるBGMプレーヤーではありません。その機能とは？</span>
                 </h2>
-                
                 <p class="text-justify mb-4 text-xs leading-6 text-gray-700">
                     <strong>一流ホテル・商業施設・オープンオフィス。</strong><br>
                     こうした上質な空間で、より快適に、効率的に働ける環境を作るために導入されたのが、この<strong>「サウンドマスキング」</strong>システムです。
                     「静かすぎて話しづらい」「周囲の会話が気になって集中できない」...こうしたオフィスの課題を、<strong>「ほどよい音のカーテン」</strong>で優しく包み込むことで解決します。
                 </p>
-                
                 <div class="grid grid-cols-3 gap-3 mb-4">
                     <div class="border border-gray-200 p-2 rounded-lg text-center shadow-sm bg-white/50">
                         <div class="text-xl mb-1">🧠</div>
@@ -175,7 +168,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="bg-slate-50 border border-slate-200 rounded-lg p-2 relative overflow-hidden">
                 <div class="absolute top-0 right-0 bg-blue-100 text-blue-800 text-[8px] px-2 py-1 rounded-bl font-bold">Scientific Evidence</div>
                 <h3 class="text-xs font-bold text-gray-600 mb-1 flex items-center pt-1">
@@ -301,8 +293,8 @@
             </table>
         </div>
 
-        <div class="flex gap-6 mb-4 mt-auto">
-            <div class="w-1/2">
+        <div class="flex gap-4 mb-4 mt-auto">
+            <div class="w-1/3">
                 <h3 class="text-sm font-bold border-b-2 border-gray-200 pb-1 mb-2 text-gray-700">おすすめの提案先</h3>
                 <div class="grid grid-cols-1 gap-2 text-xs">
                     <div class="flex items-start bg-gray-50 p-2 rounded">
@@ -320,7 +312,7 @@
                 </div>
             </div>
             
-            <div class="w-1/2">
+            <div class="w-1/3">
                 <h3 class="text-sm font-bold border-b-2 border-gray-200 pb-1 mb-2 text-gray-700">空間のプロに選ばれる実績</h3>
                 <ul class="text-xs text-gray-600 space-y-2">
                     <li class="flex items-start">
@@ -345,6 +337,18 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+
+            <div class="w-1/3 flex flex-col">
+                <h3 class="text-sm font-bold border-b-2 border-gray-200 pb-1 mb-2 text-gray-700">その他の導入実例</h3>
+                <div class="flex-grow flex flex-col justify-center items-center bg-gray-50 rounded p-2 border border-gray-100">
+                    <img src="qr.png" alt="導入実例QRコード" class="w-20 h-20 mb-2 p-1 bg-white rounded shadow-sm">
+                    <p class="text-[10px] text-gray-600 text-center leading-tight">
+                        スマホで読み取ると<br>
+                        さらに詳しい事例を<br>
+                        ご覧いただけます。
+                    </p>
+                </div>
             </div>
         </div>
 
