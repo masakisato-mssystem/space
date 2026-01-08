@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スペース様向けA4リーフレット（バランス最適化版）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #555;
+            color: #333;
+            line-height: 1.5; 
+            padding: 20px;
+        }
+
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            margin: 0 auto 40px auto;
+            padding: 12mm 15mm; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-label {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        /* 印刷用調整 */
+        @media print {
+            body {
+                background: none;
+                margin: 0;
+                padding: 0;
+            }
+            .a4-page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+                height: 297mm;
+                padding: 12mm 15mm;
+            }
+            .page-label {
+                display: none;
+            }
+        }
+
+        .accent-color {
+            color: #0056b3;
+        }
+        .bg-accent {
+            background-color: #0056b3;
+        }
+        .border-accent {
+            border-color: #0056b3;
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #0056b3, #0088ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .comparison-table th {
+            background-color: #f3f4f6;
+            color: #555;
+            font-weight: normal;
+            font-size: 0.8rem;
+        }
+        .comparison-table td.highlight {
+            background-color: #eff6ff;
+            font-weight: bold;
+            color: #0056b3;
+            border: 2px solid #bfdbfe;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-label">【表面】コンセプト＆機能紹介</div>
+
+    <div class="a4-page">
+        <header class="text-center mb-4 mt-2">
+            <h1 class="text-4xl font-bold mb-3 leading-tight text-gradient">
+                音で空間をデザインする。
+            </h1>
+            <div class="w-16 h-1 bg-blue-600 mx-auto mb-3"></div>
+            <p class="text-lg font-medium text-gray-700">
+                それは、空間の「居心地」と「集中」を創り出す<br>
+                <span class="accent-color font-bold">「音のエア・コンディショナー」</span>という新発想。
+            </p>
+        </header>
+
+        <div class="relative mb-7 w-full h-[340px] bg-slate-50 rounded-xl overflow-hidden shadow-inner border border-gray-200 shrink-0">
+            
+            <div class="absolute inset-0 z-0">
+                <img src="main.jpg" alt="メインビジュアル" class="w-full h-full object-cover">
+            </div>
+
+            <div class="absolute top-9 left-5 z-10 w-48">
+                <div class="bg-white/95 backdrop-blur-md p-3 rounded-r-lg rounded-tl-lg shadow-md border-l-4 border-blue-600">
+                    <span class="text-[10px] text-gray-400 font-bold uppercase block mb-1 tracking-wider">Sound Reach</span>
+                    <p class="text-4xl font-bold text-blue-900 leading-none tracking-tighter">360<span class="text-lg align-top">°</span></p>
+                    <p class="text-[10px] text-gray-600 font-bold mt-1">全方位への自然な広がり</p>
+                </div>
+            </div>
+
+            <div class="absolute top-9 right-5 z-10 w-48 flex justify-end">
+                <div class="bg-white/95 backdrop-blur-md p-3 text-right rounded-l-lg rounded-tr-lg shadow-md border-r-4 border-gray-400 w-full">
+                    <span class="text-[10px] text-gray-400 font-bold uppercase block mb-1 tracking-wider">Design</span>
+                    <p class="text-base font-bold text-gray-800 leading-tight">空間に溶け込む<br>筒型デザイン</p>
+                    <p class="text-[10px] text-gray-600 mt-1">圧迫感を与えないフォルム</p>
+                </div>
+            </div>
+
+            <div class="absolute bottom-9 left-5 z-10 w-48">
+                <div class="bg-white/95 backdrop-blur-md p-3 rounded-r-lg rounded-bl-lg shadow-md border-l-4 border-blue-600">
+                    <span class="text-[10px] text-gray-400 font-bold uppercase block mb-1 tracking-wider">Cover Area</span>
+                    <div class="flex items-baseline">
+                        <span class="text-sm font-bold text-blue-900 mr-1">約</span>
+                        <p class="text-3xl font-bold text-blue-900 leading-none">200<span class="text-sm">㎡</span></p>
+                    </div>
+                    <p class="text-[10px] text-gray-600 font-bold mt-1">1台で全体をカバー</p>
+                </div>
+            </div>
+
+            <div class="absolute bottom-9 right-5 z-10 w-48 flex justify-end">
+                <div class="bg-white/95 backdrop-blur-md p-3 text-right rounded-l-lg rounded-br-lg shadow-md border-r-4 border-gray-400 w-full">
+                    <span class="text-[10px] text-gray-400 font-bold uppercase block mb-1 tracking-wider">Material</span>
+                    <p class="text-sm font-bold text-gray-800 leading-snug mb-1">自然な木目調カバー<br>塗装仕上げ</p>
+                    <p class="text-[10px] text-gray-600 leading-relaxed mt-1">インテリアに合わせて<br>カスタマイズ可能</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-grow flex flex-col gap-4">
+            <div>
+                <h2 class="text-lg font-bold border-l-4 border-accent pl-3 mb-3 flex items-center">
+                    <span class="text-2xl mr-2 text-blue-600 font-serif italic">Q.</span> 
+                    <span>単なるBGMプレーヤーではありません。その機能とは？</span>
+                </h2>
+                
+                <p class="text-justify mb-4 text-xs leading-6 text-gray-700">
+                    <strong>一流ホテル・商業施設・オープンオフィス。</strong><br>
+                    こうした上質な空間で、より快適に、効率的に働ける環境を作るために導入されたのが、この<strong>「サウンドマスキング」</strong>システムです。
+                    「静かすぎて話しづらい」「周囲の会話が気になって集中できない」...こうしたオフィスの課題を、<strong>「ほどよい音のカーテン」</strong>で優しく包み込むことで解決します。
+                </p>
+                
+                <div class="grid grid-cols-3 gap-3 mb-4">
+                    <div class="border border-gray-200 p-2 rounded-lg text-center shadow-sm bg-white/50">
+                        <div class="text-xl mb-1">🧠</div>
+                        <h3 class="font-bold text-xs mb-1 accent-color">集中力アップ</h3>
+                        <p class="text-[9px] text-gray-600 leading-relaxed">周囲のノイズをマスキングし業務へ没入。</p>
+                    </div>
+                    <div class="border border-gray-200 p-2 rounded-lg text-center shadow-sm bg-white/50">
+                        <div class="text-xl mb-1">🔒</div>
+                        <h3 class="font-bold text-xs mb-1 accent-color">プライバシー保護</h3>
+                        <p class="text-[9px] text-gray-600 leading-relaxed">会話の内容を聞き取られにくくします。</p>
+                    </div>
+                    <div class="border border-gray-200 p-2 rounded-lg text-center shadow-sm bg-white/50">
+                        <div class="text-xl mb-1">🌿</div>
+                        <h3 class="font-bold text-xs mb-1 accent-color">疲れない音</h3>
+                        <p class="text-[9px] text-gray-600 leading-relaxed">「自然な響き」は脳に負担をかけません。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-lg p-2 relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-blue-100 text-blue-800 text-[8px] px-2 py-1 rounded-bl font-bold">Scientific Evidence</div>
+                <h3 class="text-xs font-bold text-gray-600 mb-1 flex items-center pt-1">
+                    <span class="w-1 h-3 bg-blue-500 mr-2 rounded-full"></span>
+                    日本レジリエンス医学研究所による実証データ
+                </h3>
+                <div class="flex gap-4">
+                    <div class="w-1/2 bg-white p-2 rounded border border-gray-100 shadow-sm flex items-center justify-between px-3">
+                        <div>
+                            <p class="text-[9px] font-bold text-gray-700">ネガティブ感情の緩和</p>
+                            <p class="text-[8px] text-gray-500 scale-95 origin-left">(TMD:総合的気分状態)</p>
+                        </div>
+                        <div class="text-right">
+                             <div class="text-lg font-bold text-blue-600 leading-none">↘ <span class="text-xs text-gray-800">p=0.01</span></div>
+                             <div class="text-[8px] text-red-500 font-bold bg-red-50 px-1 inline-block rounded mt-0.5">有意差あり</div>
+                        </div>
+                    </div>
+                    <div class="w-1/2 bg-white p-2 rounded border border-gray-100 shadow-sm flex items-center justify-between px-3">
+                        <div>
+                            <p class="text-[9px] font-bold text-gray-700">ストレス・興奮の抑制</p>
+                            <p class="text-[8px] text-gray-500 scale-95 origin-left">(LF:交感神経活動指標)</p>
+                        </div>
+                        <div class="text-right">
+                             <div class="text-lg font-bold text-blue-600 leading-none">↘ <span class="text-xs text-gray-800">p=0.02</span></div>
+                             <div class="text-[8px] text-red-500 font-bold bg-red-50 px-1 inline-block rounded mt-0.5">有意差あり</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-blue-900 text-white p-3 rounded-lg text-center mt-auto shadow-md">
+            <h3 class="text-sm font-bold mb-1">図面ではわからない「音の快適さ」を、実際の空間で検証できます</h3>
+            <p class="text-[10px] opacity-90 mb-1">
+                クライアント様の現場や、御社のプレゼンルームでの<strong>「実機デモ（無料）」</strong>が可能です。<br>
+                「この図面の広さで足りるか？」等のご相談も、お気軽にお声がけください。
+            </p>
+            <div class="inline-block border border-white px-6 py-0.5 rounded-full text-[10px] font-bold tracking-wider">裏面へ：営業・設計担当者様向け活用ガイド</div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="page-label">【裏面】営業・設計向け：クライアント提案活用ガイド</div>
+
+    <div class="a4-page">
+        <header class="mb-4 border-b border-gray-200 pb-3">
+            <div class="flex justify-between items-end">
+                <div>
+                    <h2 class="text-2xl font-bold accent-color mb-1">
+                        その空間設計に<br>「見えないパーティション」を。
+                    </h2>
+                    <p class="text-sm font-medium text-gray-600">
+                        1台置くだけで、クライアント様の「音の課題」を解決するご提案。
+                    </p>
+                </div>
+                <div class="text-right">
+                    <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded border border-gray-300">クライアント提案用資料</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="mb-4 bg-yellow-50 p-3 rounded-lg border border-yellow-100">
+            <p class="text-sm mb-2 font-bold text-gray-800 flex items-center">
+                <span class="text-yellow-500 text-lg mr-2">●</span>
+                クライアント様から、このようなご相談はありませんか？
+            </p>
+            <ul class="text-xs text-gray-700 space-y-1 ml-2 grid grid-cols-2 gap-x-4">
+                <li class="flex items-start"><span class="text-blue-400 mr-2">✔</span>「会議室の声が外に漏れるのを防ぎたい」</li>
+                <li class="flex items-start"><span class="text-blue-400 mr-2">✔</span>「オフィスが静かすぎて、電話しにくい」</li>
+                <li class="flex items-start"><span class="text-blue-400 mr-2">✔</span>「内装は完璧だが、居心地をさらに高めたい」</li>
+                <li class="flex items-start"><span class="text-blue-400 mr-2">✔</span>「天井設備（天伏）を複雑にしたくない」</li>
+            </ul>
+        </div>
+
+        <div class="mb-5">
+            <h3 class="text-md font-bold text-white bg-accent px-5 py-1 inline-block rounded-t-lg shadow-sm">
+                一般的な設備スピーカーとの決定的な違い
+            </h3>
+            <table class="w-full text-sm border-collapse comparison-table shadow-sm border border-gray-200">
+                <thead>
+                    <tr>
+                        <th class="border p-2 w-1/4">特徴</th>
+                        <th class="border p-2 w-1/3">一般的な設備スピーカー</th>
+                        <th class="border p-2 w-1/3 bg-blue-600 text-white font-bold text-sm">エムズシステム（ご提案商品）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border p-3 font-bold bg-white text-center">音の指向性</td>
+                        <td class="border p-3 bg-white">
+                            <span class="font-bold text-red-500 block mb-1">強い（特定の方向へ飛ぶ）</span>
+                            <span class="text-xs text-gray-500">スピーカーの下だけうるさく、<br>離れると聞こえない</span>
+                        </td>
+                        <td class="border p-3 highlight">
+                            <span class="text-base text-blue-600 block mb-1">◎ 自然・拡散（無指向性）</span>
+                            <span class="text-xs text-gray-700">360度優しく広がり、<br>部屋のどこにいても均一な音量</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border p-3 font-bold bg-white text-center">カバーエリア<br>必要台数</td>
+                        <td class="border p-3 bg-white">
+                            <span class="font-bold text-red-500 block mb-1">狭い（多数必要）</span>
+                            <span class="text-xs text-gray-500">台数が増え、コスト増・<br>設置の手間増につながる</span>
+                        </td>
+                        <td class="border p-3 highlight">
+                            <span class="text-base text-blue-600 block mb-1">◎ 広い（約200㎡まで）</span>
+                            <span class="text-xs text-gray-700">たった1台でカバー。<br>コストパフォーマンスに優れる。</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border p-3 font-bold bg-white text-center">意匠・施工</td>
+                        <td class="border p-3 bg-white">
+                            <span class="font-bold text-red-500 block mb-1">天井工事が必要</span>
+                            <span class="text-xs text-gray-500">配線が複雑で、天井のデザイン<br>（意匠）を損なう場合がある</span>
+                        </td>
+                        <td class="border p-3 highlight">
+                            <span class="text-base text-blue-600 block mb-1">◎ 天吊り・置き型 両対応</span>
+                            <span class="text-xs text-gray-700">コンセント1つで完結。<br>大掛かりな工事不要で即導入。</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="flex gap-6 mb-4 mt-auto">
+            <div class="w-1/2">
+                <h3 class="text-sm font-bold border-b-2 border-gray-200 pb-1 mb-2 text-gray-700">おすすめの提案先</h3>
+                <div class="grid grid-cols-1 gap-2 text-xs">
+                    <div class="flex items-start bg-gray-50 p-2 rounded">
+                        <span class="text-xl mr-2">🏢</span>
+                        <div><strong class="text-blue-700 text-sm">オフィス・会議室</strong><br><span class="text-gray-600">オープンエリアの音漏れ対策、集中力向上に。</span></div>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-2 rounded">
+                        <span class="text-xl mr-2">🏦</span>
+                        <div><strong class="text-blue-700 text-sm">銀行・士業事務所</strong><br><span class="text-gray-600">「情報の守秘」と安心感の醸成に。</span></div>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-2 rounded">
+                        <span class="text-xl mr-2">🏥</span>
+                        <div><strong class="text-blue-700 text-sm">クリニック・薬局</strong><br><span class="text-gray-600">待合室でのプライバシー保護（スピーチプライバシー）に。</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-1/2">
+                <h3 class="text-sm font-bold border-b-2 border-gray-200 pb-1 mb-2 text-gray-700">空間のプロに選ばれる実績</h3>
+                <ul class="text-xs text-gray-600 space-y-2">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2 mt-0.5">■</span>
+                        <div>
+                            <strong class="text-gray-800">パレスホテル東京</strong>（スイートルーム）<br>
+                            <span class="text-[10px] text-gray-500">最高峰の空間美と静謐な体験を提供</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2 mt-0.5">■</span>
+                        <div>
+                            <strong class="text-gray-800">帝国ホテル 東京</strong>（ロビー・ラウンジ）<br>
+                            <span class="text-[10px] text-gray-500">日本を代表するおもてなしの心を音で表現</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2 mt-0.5">■</span>
+                        <div>
+                            <strong class="text-gray-800">伊勢丹新宿本店</strong>（VIPサロン他）<br>
+                            <span class="text-[10px] text-gray-500">商業空間の価値を高める音の演出</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 border border-gray-300 rounded-lg p-4 mt-2">
+            <div class="flex justify-between items-center">
+                <div class="flex-grow pr-4">
+                    <h3 class="text-md font-bold mb-1 text-blue-900">図面ではわからない「音の快適さ」を、実際の空間で検証できます</h3>
+                    <p class="text-xs text-gray-700 leading-relaxed">
+                        クライアント様の現場や、御社のプレゼンルームでの<strong>「実機デモ（無料）」</strong>が可能です。<br>
+                        「この図面の広さで足りるか？」等のご相談も、お気軽にお声がけください。
+                    </p>
+                </div>
+                
+                <div class="w-56 h-28 bg-white border border-dashed border-gray-400 flex flex-col items-center justify-center text-center relative shadow-sm shrink-0">
+                    <span class="absolute top-1 left-1/2 transform -translate-x-1/2 text-[9px] text-gray-400 bg-white px-2">▼ 担当者 ▼</span>
+                    <div class="p-2 w-full h-full flex flex-col justify-center items-center">
+                        <p class="font-bold text-sm text-gray-800 mb-1">有限会社エムズシステム</p>
+                        <div class="w-8 h-0.5 bg-blue-500 mb-1"></div>
+                        <p class="text-[11px] text-gray-600">担当：佐藤 正樹</p>
+                        <p class="text-[10px] mt-0.5 text-gray-500">Mobile: 070-1060-2191</p>
+                        <p class="text-[10px] text-gray-500">Email: support@mssystem.co.jp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
